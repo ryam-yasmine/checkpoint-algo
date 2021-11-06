@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script language="javascript">
+      var ph = "";
+      var c = 0;
+      var word = 0;
+      var sentence = "";
+      const vow = ["a", "e", "i", "o", "u", "y"];
+      var v = 0;
+      while (ph !== ".") {
+        ph = prompt("enter a caracter");
+        sentence += ph;
+        c += 1;
+        if (ph == " ") {
+          c -= 1;
+          word += 1;
+        }
+
+        for (let i = 0; i < vow.length; i++) {
+          if (ph == vow[i]) {
+            v += 1;
+          }
+        }
+      }
+      console.log(sentence);
+      console.log(`nombre de caractères=${c}`);
+      word += 1;
+      console.log(`nombre de mots=${word}`);
+      console.log(`nombre de voyelles=${v}`);
+    </script>
+  </body>
+</html>
